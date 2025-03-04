@@ -54,7 +54,6 @@ int main() {
         printf("\n");
     }
 
-
     // Nível Mestre - Habilidades Especiais com Matrizes
     // Sugestão: Crie matrizes para representar habilidades especiais como cone, cruz, e octaedro.
     // Sugestão: Utilize estruturas de repetição aninhadas para preencher as áreas afetadas por essas habilidades no tabuleiro.
@@ -75,6 +74,82 @@ int main() {
     // 0 0 1 0 0
     // 1 1 1 1 1
     // 0 0 1 0 0
+
+    int tabuleiroCone [5][5];
+    int tabuleiroOctaedro [5][5];
+    int tabuleiroCruz [5][5];
+    char colunas1 [5] = {'A', 'B', 'C','D', 'E'};
+
+    // Inicializa o tabuleiro Cone Octaedro e Cruz
+    for (int i = 0; i < 5; i++) {
+        for (int j = 0; j < 5; j++) {
+            tabuleiroCone[i][j] = 0;
+            tabuleiroOctaedro[i][j] = 0;
+            tabuleiroCruz[i][j] = 0;
+        }
+    }
+
+
+    // declara o Octoadro
+    int coneX = 1, coneY = 2;
+    for (int i = 0; i < 5; i++) {
+        for (int j = 0; j < 5; j++) {
+            if ((i == 1 && (j == 1 || j == 3)) || (i == 3 && (j == 1 || j == 3)) || (i == 2) || (j == 2)) {
+            tabuleiroOctaedro[i][j] = 5;
+            }
+            
+        }
+    }
+
+
+    // Imprimir tabuleiro Octoacro
+    printf("TABULEIRO BATALHA NAVAL Octoadro\n");
+    printf("   ");
+    for (int i = 0; i < 5; i++) {
+        printf("%c ", colunas1[i]);
+    }
+    printf("\n");
+
+    for (int i = 0; i < 5; i++) {
+        printf("%2d ", i + 1);
+        for (int j = 0; j < 5; j++) {
+         printf("%d ", tabuleiroOctaedro[i][j]);
+    }
+    printf("\n");
+}
+
+
+// declara Cone
+for (int i = 1; i < 4; i++) {
+    for (int j = 0; j < 5; j++) {
+        if ((i == 1 && j == 2) || (i == 2 && (j == 1 || j == 2 || j == 3)) || (i == 3)) {
+        tabuleiroCone[i][j] = 5;
+        }
+        
+    }
+}
+
+
+// Imprimir tabuleiro CONE
+printf("TABULEIRO BATALHA NAVAL CONE\n");
+printf("   ");
+for (int i = 0; i < 5; i++) {
+    printf("%c ", colunas1[i]);
+}
+printf("\n");
+
+for (int i = 0; i < 5; i++) {
+    printf("%2d ", i + 1);
+    for (int j = 0; j < 5; j++) {
+     printf("%d ", tabuleiroCone[i][j]);
+}
+printf("\n");
+}
+
+
+
+
+
 
     return 0;
 }
