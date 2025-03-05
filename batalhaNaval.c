@@ -147,6 +147,32 @@ printf("\n");
 }
 
 
+  // declara Cruz
+  for (int i = 0; i < 5; i++) {
+      for (int j = 0; j < 5; j++) {
+          if ( (i == 2) || (j == 2)) {
+          tabuleiroCruz[i][j] = 5;
+          }
+          
+      }
+  }
+
+
+  // Imprimir tabuleiro Octoacro
+  printf("TABULEIRO BATALHA NAVAL CRUZ \n");
+  printf("   ");
+  for (int i = 0; i < 5; i++) {
+      printf("%c ", colunas1[i]);
+  }
+  printf("\n");
+
+  for (int i = 0; i < 5; i++) {
+      printf("%2d ", i + 1);
+      for (int j = 0; j < 5; j++) {
+       printf("%d ", tabuleiroCruz[i][j]);
+  }
+  printf("\n");
+}
 
 
 
